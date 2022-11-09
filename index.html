@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App Widget Clima</title>
+</head>
+
+<body>
+    <script type="module">
+        import * as XWeather from './node_modules/x-weather/dist/esm/module.js';
+
+        XWeather.defineCustomElements()
+    </script>
+    <x-weather appid="fd532756f5459292da7a35404615614e" latitude="7.76667" longitude="-72.2333" placename="San CrisToche, Tachira,   Venezuela">
+        <x-current primaryscale="f"></x-current>
+        <x-forecast days="4" primaryscale="f"></x-forecast>
+    </x-weather>
+    <main>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
